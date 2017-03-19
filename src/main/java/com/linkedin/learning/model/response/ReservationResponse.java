@@ -3,6 +3,11 @@ package com.linkedin.learning.model.response;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.linkedin.learning.model.Links;
 
+/**
+ * Room Reservation response object.
+ *
+ * @author Chris Anatalio
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ReservationResponse {
 
