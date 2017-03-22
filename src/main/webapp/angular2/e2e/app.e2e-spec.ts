@@ -1,14 +1,10 @@
-import { Angular2Page } from './app.po';
+import {Angular2Page} from "./app.po";
 
 describe('angular2 App', () => {
-  let page: Angular2Page;
+  let page:Angular2Page;
 
   beforeEach(() => {
     page = new Angular2Page();
   });
-
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
+  
 });
