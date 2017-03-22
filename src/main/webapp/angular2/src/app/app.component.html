@@ -25,7 +25,7 @@
         <div class="col-12">
 
           <div class="gallery">
-            <img src="src/app/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
+            <img src="src/app/images/dining_rooftop.jpg" alt="Intro Rooftop Cafe">
             <img src="src/app/images/intro_pool.jpg" alt="Intro Gallery Pool Sample Pictures">
             <img src="src/app/images/intro_dining.jpg" alt="Intro Gallery Dining Sample Pictures">
             <img src="src/app/images/intro_attractions.jpg" alt="Intro Gallery Attractions Sample Pictures">
@@ -33,8 +33,8 @@
           </div>
           <h1>Book a Room</h1>
 
-          <form class="form-horizontal" [formGroup]="user"
-                (ngSubmit)="onSubmit(user)">
+          <form class="form-horizontal" [formGroup]="roomsearch"
+                (ngSubmit)="onSubmit(roomsearch)">
             <div class="form-group">
               <label for="checkin" class="col-sm-4 control-label">Check-In:</label>
               <div class="col-sm-8">
@@ -53,6 +53,33 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+          <h1 class="center-block">Available Rooms</h1>
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              </thead>
+              <tbody>
+              <tr *ngFor="let room of rooms">
+                <td><img src="src/app/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures"></td>
+                <td>
+                  <strong>Room #:</strong> {{room.roomNumber}} <br/>
+                  <strong>Price:</strong> ${{room.price}}.99
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-primary" (click)="reserveRoom(room.id)">Reserve</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
 
