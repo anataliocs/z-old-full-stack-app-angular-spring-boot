@@ -1,7 +1,8 @@
 package com.linkedin.learning.model.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.linkedin.learning.model.Links;
+
+import java.time.LocalDate;
 
 /**
  * Room Reservation response object.
@@ -12,18 +13,16 @@ import com.linkedin.learning.model.Links;
 public class ReservationResponse {
 
     private Long id;
-    private Integer roomNumber;
-    private Integer price;
-    private Links links;
+    private LocalDate checkin;
+    private LocalDate checkout;
 
     public ReservationResponse() {
     }
 
-    public ReservationResponse(Long id, Integer roomNumber, Integer price, Links links) {
+    public ReservationResponse(Long id, LocalDate checkin, LocalDate checkout) {
         this.id = id;
-        this.roomNumber = roomNumber;
-        this.price = price;
-        this.links = links;
+        this.checkin = checkin;
+        this.checkout = checkout;
     }
 
     public Long getId() {
@@ -34,27 +33,19 @@ public class ReservationResponse {
         this.id = id;
     }
 
-    public Integer getRoomNumber() {
-        return roomNumber;
+    public LocalDate getCheckin() {
+        return checkin;
     }
 
-    public void setRoomNumber(Integer roomNumber) {
-        this.roomNumber = roomNumber;
+    public void setCheckin(LocalDate checkin) {
+        this.checkin = checkin;
     }
 
-    public Integer getPrice() {
-        return price;
+    public LocalDate getCheckout() {
+        return checkout;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public Links getLinks() {
-        return links;
-    }
-
-    public void setLinks(Links links) {
-        this.links = links;
+    public void setCheckout(LocalDate checkout) {
+        this.checkout = checkout;
     }
 }
