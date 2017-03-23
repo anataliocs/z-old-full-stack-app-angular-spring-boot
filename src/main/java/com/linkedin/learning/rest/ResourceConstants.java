@@ -1,6 +1,6 @@
 package com.linkedin.learning.rest;
 
-class ResourceConstants {
+public class ResourceConstants {
 
-    static final String ROOM_RESERVATION_V1 = "/room/reservation/v1";
+    public static final String ROOM_RESERVATION_V1 = "/room/reservation/v1";
 }

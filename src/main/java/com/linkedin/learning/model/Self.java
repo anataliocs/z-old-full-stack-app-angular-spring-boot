@@ -1,6 +1,6 @@
 package com.linkedin.learning.model;
 
-class Self {
+public class Self {
     private String ref;
 
     public String getRef() {
