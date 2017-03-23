@@ -9,7 +9,6 @@ import com.linkedin.learning.model.response.ReservationResponse;
 import com.linkedin.learning.repository.ReservationRepository;
 import com.linkedin.learning.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Import;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,6 +29,7 @@ import static com.linkedin.learning.rest.ResourceConstants.ROOM_RESERVATION_V1;
  */
 @RestController
 @RequestMapping(ROOM_RESERVATION_V1)
+@CrossOrigin
 public class ReservationResource {
 
     @Autowired
